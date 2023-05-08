@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
+import React from 'react';
+import HomeScreen from './HomeScreen';
+import RidingGear from './RidingGear';
+import CameraScreen from './CameraScreen';
+import TrekkingGear from './TrekkingGear';
+import WinterWear from './WinterWear';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+const Stack = createStackNavigator();
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+     <Stack.Navigator>
+     <Stack.Screen name="HomeScreen" component={HomeScreen}  options={{ headerShown: false }}/>
+      <Stack.Screen name="CameraScreen" component={CameraScreen}  options={{ headerShown: false }}/>
+      <Stack.Screen name="TrekkingGear" component={TrekkingGear}  options={{ headerShown: false }} />
+        <Stack.Screen name="WinterWear" component={WinterWear}  options={{ headerShown: false }}/>
+        <Stack.Screen name="RidingGear" component={RidingGear}  options={{ headerShown: false }}/>
+    </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
