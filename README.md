@@ -1,7 +1,7 @@
 # Sharepal-Project
 
 ***Video Demo***
-![Alt Text](https://drive.google.com/uc?export=download&id=1FUHXylo2ZlDYqzLrUIadinSQ-iYrwNGY)
+![Alt Text](Video/video-recording.mp4)
 
 
 
